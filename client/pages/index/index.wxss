@@ -1,0 +1,342 @@
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.title {
+  text-align: center;
+  line-height: 80px;
+  padding-top: 80rpx;
+  font-size: 40rpx;
+}
+.title1 {
+  text-align: center;
+  line-height: 70rpx;
+  padding-top: 30rpx;
+  font-size: 40rpx;
+}
+.title2 {
+  color: #1ac575;
+}
+.username {
+  text-align: center;
+}
+.btn-box {
+  margin-top: 50rpx;
+}
+.btn {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 2px 10px;
+  color: white;
+  background-color: #1ebb7f;
+  font-weight: bold;
+}
+.btn1 {
+  width: 500rpx;
+  border-radius: 50rpx;
+}
+.userinfo, .uploader, .tunnel {
+  margin-top: 40rpx;
+  height: 140rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #007aff;
+  background-color: white;
+  background-size: cover;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+.uploader, .tunnel {
+  height: auto;
+  padding: 0 0 0 40rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.uploader-text, .tunnel-text {
+  width: 100%;
+  line-height: 52px;
+  font-size: 34rpx;
+  color: #007aff;
+}
+
+.uploader-container {
+  width: 100%;
+  height: 400rpx;
+  padding: 50rpx 20rpx 20rpx 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.uploader-image {
+  width: 100%;
+  height: 360rpx;
+}
+
+.tunnel {
+  padding: 0 0 0 40rpx;
+}
+
+.tunnel-text {
+  position: relative;
+  color: #222;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tunnel-text:first-child {
+  border-top: none;
+}
+
+.tunnel-switch {
+  position: absolute;
+  right: 20rpx;
+  top: -2rpx;
+}
+
+.disable {
+  color: #888;
+}
+
+.service {
+  position: fixed;
+  right: 40rpx;
+  bottom: 40rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background: linear-gradient(#007aff, #0063ce);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: all 300ms ease;
+}
+
+.service-button {
+  position: absolute;
+  top: 40rpx;
+}
+
+.service:active {
+  box-shadow: none;
+}
+
+.request-text {
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  word-break: break-all;
+}
+
+/* 答题详情的样式 */
+.container2 {
+  padding-top: 40rpx;
+  margin: 0 auto;
+  line-height: 60rpx;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+/* 答题的三种状态 */
+.item1 {
+  padding: 20rpx 20rpx;
+  font-size: 35rpx;
+  word-break: break-all;
+  margin-top: 30rpx;
+  line-height: 43rpx;
+  border: 1rpx solid rgb(216, 219, 223);
+  width: 580rpx;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 400;
+  border-radius: 42rpx;
+  margin-bottom: 25rpx;
+}
+.item2 {
+  color: red;
+}
+.item3 {
+  color: white;
+  background-color: #1ac575;
+}
+
+.txt12 {
+  color: #1ac575;
+}
+.txt2 {
+  margin-top: 0rpx;
+  text-align: center;
+  font-size: 30rpx;
+  word-break: break-all;
+  color: #1ac575;
+  margin-bottom: 30rpx;
+}
+.title-box {
+  margin-top: 40rpx;
+}
+.txt3 {
+  font-size: 40rpx;
+  text-align: center;
+  font-weight: 500;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+}
+.btn-box2 {
+  text-align: center;
+  margin: 50rpx auto 0;
+}
+.btn2 {
+  display: inline-block;
+  margin: 0rpx auto;
+  padding: 0rpx 20rpx;
+  color: #1ac575;
+  border: 2rpx solid #1ac575;
+  width: 300rpx;
+  border-radius: 35rpx;
+}
+.dialog {
+  width: 100%;
+  text-align: center;
+  margin-top: 30rpx;
+  color: red;
+}
+/* 主持人控制页面 */
+.btn-box1 {
+  text-align: center;
+  position: fixed;
+  top: 800rpx;
+  left: 0;
+  width: 100%;
+}
+.btn3 {
+  display: inline-block;
+  margin: 0rpx 100rpx;
+  padding: 0rpx 20rpx;
+  color: white;
+  background-color: #1ac575;
+  font-weight: bold;
+}
+/* 主持人下一题按钮致灰 */
+.un-btn {
+  background-color: gray;
+}
+.btn-cli {
+  background-color: #a1e0a1;
+}
+.item-box {
+  position: relative;
+  width: 650rpx;
+  margin: 20rpx auto 0;
+  box-shadow: 0rpx 0rpx 30rpx 5rpx #dbe9db;
+  padding-top: 30rpx;
+  padding-bottom: 20rpx;
+}
+.timeCls {
+  color: #13c974;
+  text-align: center;
+  margin: 0 auto 30rpx;
+  width: 70rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  position: absolute;
+  top: -35rpx;
+  left: 50%;
+  margin-left: -35rpx;
+  /* border: 1rpx solid black; */
+}
+.hidden {
+  visibility: hidden;
+}
+
+.bgc {
+  width: 70rpx;
+  height: 70rpx;
+}
+.bgc1 {
+  width: 70rpx;
+  height: 70rpx;
+  animation: headRotate 1s linear 38; 
+}
+@keyframes headRotate{
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+.timeTex {
+  position: absolute;
+  width: 70rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 70rpx;
+  top: 0;
+  left: 0;
+}
+.host-box {
+  padding-top: 90rpx;
+}
+.alert {
+  display: inline-block;
+  color: #1ac575;
+}
+.box1 {
+  width: 100%;
+  margin: 100rpx auto;
+}
+.btn-cle {
+  color: white;
+  background-color: #1ac575;
+  font-weight: bold;
+  margin: 100rpx 250rpx;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-get {
+  border: none;
+  width: auto;
+  height: auto;
+}

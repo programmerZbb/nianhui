@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="container" wx:if="{{condition&&!showHost&&!showAdmin}}">
+
+  <!-- 桌号 -->
+  <view class='title'>你的桌号是：{{tableNumber}}</view>
+  <view>
+    <image src='{{avatarUrl}}' class="userinfo-avatar"></image>
+    <view class='username'>{{userInfo.nickName}}</view>
+  </view>
+  <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler" wx:if="{{allow}}"> 点击授权 </button>
+  <view class='btn-box'>
+    <button class='btn btn1' bindtap="intoQues" hover-class="btn-cli">点击答题</button>
+  </view>
+  <view class="dialog" wx:if="{{intoFlag}}">
+    答题还没有开放！
+  </view>
+</view>
+<view class="container2" wx:if="{{!condition&&!showHost&&!showAdmin}}">
+  <view class="item-box">
+      <!-- <view class="timeCls"> -->
+      <view class="{{timeHid}}">
+        <image class="{{bgc}}" src="../../images/circle2.png" animation="{{animation}}"></image>
+        <view class="timeTex">{{restTime}}</view> 
+      </view>
+      <view class="title-box">
+        <view class="txt3">第 {{currentQuestion}} 题：{{questions.title}}</view> 
+        <view class="txt2">
+            (价值{{questions.money}}元)
+        </view> 
+      </view>
+      <view class="{{items[0]}}" bindtap="answer" data-val="1" hover-class="txt12">A. {{questions.A}}</view>
+      <view class="{{items[1]}}" bindtap="answer" data-val="2" hover-class="txt12">B. {{questions.B}}</view>
+      <view class="{{items[2]}}" bindtap="answer" data-val="3" hover-class="txt12">C. {{questions.C}}</view>
+      <view class="{{items[3]}}" bindtap="answer" data-val="4" hover-class="txt12">D. {{questions.D}}</view>
+  </view>
+  <view class="btn-box2">
+      <button class="btn2" bindtap="nextQues" hover-class="btn-cli">下一题</button>
+  </view>
+  <view class="dialog" wx:if="{{close && !isnext}}">本题已结束，等待下一题！</view>
+  <view class="dialog" wx:if="{{close && isnext}}">下一题未开始，请稍等！</view>
+  <view class="dialog" wx:if="{{flag}}">
+      下一题还没有开放！
+  </view>
+</view>
+<view  wx:if="{{showHost&&!showAdmin}}">
+  <view class="title-box host-box">
+    <view class="txt3">第 {{currentIndex+1}} 题：{{questions1.title}}</view> 
+    <view class="txt2">
+        (价值{{questions1.money}}元)
+    </view> 
+  </view>
+  <view class="title" wx:if="{{hasrank}}">本题获胜用户为：第<view class="alert">{{winer}}</view>桌</view>
+  <view class="title" wx:if="{{overCurrent && !hasrank}}">本题暂无获胜用户</view>
+  <view class="title1" wx:if="{{hasrank}}"><view class="title2">答案为：</view>{{questions2[currentIndex].answer1}}.{{questions2[currentIndex][questions2[currentIndex].answer1]}}</view>
+  <view class='btn-box1'>
+    <button class="{{isStart ? 'btn3 un-btn': 'btn3'}}" bindtap="startQues" hover-class="btn-cli">开始答题</button>
+    <button class='{{nexBtn}}' bindtap="lastQues" hover-class="{{hover1}}">下一题</button>
+  </view>
+</view>
+<view  wx:if="{{showAdmin}}" class="box1">
+  <button class="btn-cle" bindtap="admin">清除缓存</button>
+  <modal hidden="{{hidden}}" title="确认删除缓存" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{false}}">
+      删除之后数据将不再保存！！！
+  </modal>
+</view>

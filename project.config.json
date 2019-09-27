@@ -1,0 +1,63 @@
+{
+	"client": "client/",
+	"miniprogramRoot": "client/",
+	"qcloudRoot": "server/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"appid": "wx647b6f5e8d169e98",
+	"projectname": "example",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": 0,
+					"name": "桌号2",
+					"pathName": "pages/index/index",
+					"query": "tableNum=2"
+				},
+				{
+					"id": 1,
+					"name": "主持人页面",
+					"pathName": "pages/index/index",
+					"query": "page=host"
+				},
+				{
+					"id": -1,
+					"name": "主持人页面",
+					"pathName": "pages/index/index",
+					"query": "page=admin"
+				},
+				{
+					"id": -1,
+					"name": "桌号3",
+					"pathName": "pages/index/index",
+					"query": "tableNum=3"
+				}
+			]
+		}
+	}
+}

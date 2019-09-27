@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/rank/rank"
+  ],
+  "window": {
+    "backgroundColor": "red",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1ac575",
+    "navigationBarTitleText": "趣头条年会答题",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#1ac575",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "答题",
+        "iconPath": "./images/home-icon.png",
+        "selectedIconPath": "./images/home-sel.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "查看排行榜",
+        "iconPath": "./images/rank-page-icon.png",
+        "selectedIconPath": "./images/rank-sel.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

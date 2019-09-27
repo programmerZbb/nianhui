@@ -1,0 +1,6 @@
+<view>
+    <view class="title">排行榜</view>
+    <view class="rank">
+        <view wx:for="{{winnerInfo}}" wx:key="{{index}}">第 <span class="txt1">{{item.quNo}}</span> 题：{{item.tabNo}}桌 <span class="txt1">￥{{item.money}}</span></view>
+    </view>
+</view>
